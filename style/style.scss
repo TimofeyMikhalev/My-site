@@ -28,7 +28,6 @@ img {
 
 .page {
     position: relative;
-    // header
     .header {
         display: flex;
         justify-content: center;
@@ -57,9 +56,8 @@ img {
         }
     }
 
-    //blog
     .blog {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         padding: 9rem 0 0 0;
@@ -104,6 +102,92 @@ img {
             .blog__image {
                 width: 20rem;
                 height: 20rem;
+                img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+         
+            }
+        }
+    }
+    .works {
+        display: none;
+        justify-content: center;
+        align-items: center;
+   
+
+        &__container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            width: 60rem;
+            .works__title {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+            .works__projects {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                row-gap: 1rem;
+                .works__item {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    width: 55rem;
+                    height: auto;
+
+                    border-bottom: 1px solid #E0E0E0;
+                    padding-bottom: 1.4rem;
+                    margin-bottom: 1.5rem;
+                    .works__image {
+                        width: 12.5rem;
+                        height: 9rem;
+                        margin-right: 1.1rem;
+                        img {
+                            object-fit: cover;
+                            border-radius: 0.6rem;
+                        }
+                    }
+                    .works__info {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        row-gap: 1.1rem;
+                        .works__name {
+                            font-size: 1.8rem;
+                            font-weight: 700;
+                        }
+                        .works__link { 
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 0.5rem;
+
+                            width: 6rem;
+                            height: 1.3rem;
+                            background-color: #FF6464;
+                            transition: all .5s;
+                        }
+                        .works__link a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 100%;
+                            height: auto;
+                            color: #fff;   
+                        }
+                        .works__link:hover{
+                            opacity: 0.8;
+                        }
+                    }
+                }
             }
         }
     }
@@ -114,8 +198,10 @@ img {
         align-items: center;
 
         position: absolute;
-        bottom: -13rem;
+        bottom: 2rem;
         right: 3rem;
+
+        position: fixed;
         &__list {
             display: flex;
             justify-content: space-between;
@@ -137,5 +223,17 @@ img {
             }
         }
     }
+
+    
 }
 
+.active {
+    display: flex !important;
+}
+.show {
+    border-bottom: 2px solid #FF6464;
+}
+
+.hide {
+    display: none !important;
+}

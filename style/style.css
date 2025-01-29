@@ -56,7 +56,7 @@ img {
   opacity: 0.6;
 }
 .page .blog {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 9rem 0 0 0;
@@ -99,13 +99,94 @@ img {
   width: 20rem;
   height: 20rem;
 }
+.page .blog__container .blog__image img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.page .works {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.page .works__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 60rem;
+}
+.page .works__container .works__title {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.page .works__container .works__projects {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.page .works__container .works__projects .works__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 55rem;
+  height: auto;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.page .works__container .works__projects .works__item .works__image {
+  width: 12.5rem;
+  height: 9rem;
+  margin-right: 1.1rem;
+}
+.page .works__container .works__projects .works__item .works__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.6rem;
+}
+.page .works__container .works__projects .works__item .works__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 1.1rem;
+}
+.page .works__container .works__projects .works__item .works__info .works__name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.page .works__container .works__projects .works__item .works__info .works__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 6rem;
+  height: 1.3rem;
+  background-color: #FF6464;
+  transition: all 0.5s;
+}
+.page .works__container .works__projects .works__item .works__info .works__link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: #fff;
+}
+.page .works__container .works__projects .works__item .works__info .works__link:hover {
+  opacity: 0.8;
+}
 .page .social {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  bottom: -13rem;
+  bottom: 2rem;
   right: 3rem;
+  position: fixed;
 }
 .page .social__list {
   display: flex;
@@ -122,4 +203,16 @@ img {
 }
 .page .social__list .social__item .social__link:hover {
   opacity: 0.6;
+}
+
+.active {
+  display: flex !important;
+}
+
+.show {
+  border-bottom: 2px solid #FF6464;
+}
+
+.hide {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */
