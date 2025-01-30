@@ -20,4 +20,3 @@ linkNav.forEach((item, index) => {
         }
     })
 })
-
