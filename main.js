@@ -20,3 +20,19 @@ linkNav.forEach((item, index) => {
         }
     })
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("translateBtn");
+    let currentLang = "en"; // Начальный язык
+
+    button.addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "ru" : "en"; // Переключение языка
+
+        document.querySelectorAll("[data-en]").forEach(element => {
+            element.textContent = element.getAttribute(`data-${currentLang}`);
+        });
+
+        // Обновляем текст кнопки
+        button.textContent = currentLang === "en" ? "ru" : "en";
+    });
+});
